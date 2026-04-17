@@ -47,4 +47,4 @@ while(opcion != 5):
 
     else:
         #mensaje de error por opcion no valida
-        print("opcion no valida,intenta nuevamente!")
+        print("opcion no valida,intenta nuevamente...")
