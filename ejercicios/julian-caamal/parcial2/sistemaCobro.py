@@ -13,7 +13,6 @@ def calcular_subtotal(precio, cantidad):
     subtotal = precio * cantidad
     return subtotal
 
-
 # Función para calcular descuento
 def calcular_descuento(subtotal):
     """
@@ -28,7 +27,6 @@ def calcular_descuento(subtotal):
         descuento = 0
     return descuento
 
-
 # Función para calcular IVA
 def calcular_iva(subtotal_con_descuento):
     """
@@ -38,7 +36,6 @@ def calcular_iva(subtotal_con_descuento):
     """
     iva = subtotal_con_descuento * 0.16
     return iva
-
 
 # Función para mostrar ticket
 def mostrar_ticket(producto, subtotal, iva, total_final):
@@ -52,7 +49,6 @@ def mostrar_ticket(producto, subtotal, iva, total_final):
     print(f"IVA: ${iva:.2f}")
     print(f"TOTAL A PAGAR: ${total_final:.2f}")
     print("------------------------")
-
 
 # -------- FLUJO PRINCIPAL DEL PROGRAMA --------
 def main():
