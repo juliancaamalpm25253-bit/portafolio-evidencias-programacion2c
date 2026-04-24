@@ -1,18 +1,43 @@
-# PROGRAMA DE GESTIÓN DE VENTAS (MODULARIZADO)
-
-# --- FUNCIÓN 1: Pedir datos al usuario ---
+# --- FUNCION 1: Pedir datos al usuario ---
 def capturar_datos():
+    """
+    Solicita al usuario los datos del producto.
+
+    Retorno:
+        nombre (str): Nombre del producto.
+        precio (float): Precio unitario del producto.
+        cantidad (int): Cantidad de unidades.
+    """
     nombre = input("Nombre del producto: ")
     precio = float(input("Precio unitario: "))
     cantidad = int(input("Cantidad: "))
     return nombre, precio, cantidad
 
-# --- FUNCIÓN 2: Calcular el subtotal ---
+# --- FUNCION 2: Calcular el subtotal ---
 def calcular_subtotal(precio, cantidad):
+    """
+    Calcula el subtotal multiplicando el precio por la cantidad.
+
+    Argumentos:
+        precio (float): Precio unitario.
+        cantidad (int): Número de unidades.
+
+    Retorno:
+        float: Resultado de la multiplicación.
+    """
     return precio * cantidad
 
-# --- FUNCIÓN 3: Aplicar descuento ---
+# --- FUNCION 3: Aplicar descuento ---
 def aplicar_descuento(monto):
+    """
+    Aplica un descuento del 10% si el monto es mayor a $1000.
+
+    Argumentos:
+        monto (float): El subtotal de la compra.
+
+    Retorno:
+        float: Valor del descuento a restar.
+    """
     if monto > 1000:
         descuento = monto * 0.10
         print(f"Se aplicó un descuento del 10%: -${descuento:.2f}")
@@ -20,12 +45,31 @@ def aplicar_descuento(monto):
     else:
         return 0
 
-# --- FUNCIÓN 4: Calcular IVA ---
+# --- FUNCION 4: Calcular IVA ---
 def calcular_iva(monto):
+    """
+    Calcula el impuesto IVA del 16%.
+
+    Argumentos:
+        monto (float): Monto sobre el cual calcular el impuesto.
+
+    Retorno:
+        float: Valor del IVA calculado.
+    """
     return monto * 0.16
 
-# --- FUNCIÓN 5: Imprimir el ticket ---
+# --- FUNCION 5: Imprimir el ticket ---
 def mostrar_ticket(producto, sub, desc, iva, total):
+    """
+    Muestra en pantalla el ticket de venta formateado.
+
+    Argumentos:
+        producto (str): Nombre del artículo.
+        sub (float): Monto del subtotal.
+        desc (float): Monto del descuento.
+        iva (float): Monto del impuesto.
+        total (float): Monto final a pagar.
+    """
     print("\n--- TICKET DE VENTA ---")
     print(f"Producto: {producto}")
     print(f"Subtotal: ${sub:.2f}")
