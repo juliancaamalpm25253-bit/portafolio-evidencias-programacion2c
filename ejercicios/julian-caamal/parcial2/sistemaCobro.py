@@ -55,8 +55,8 @@ def mostrar_ticket(producto, subtotal, iva, total_final):
 
 
 # -------- FLUJO PRINCIPAL DEL PROGRAMA --------
-
-print("--- Sistema de Cobro v1.0 ---")
+def main():
+    print("--- Sistema de Cobro v1.0 ---")
 
 # Entrada de datos
 producto = input("Nombre del producto: ")
@@ -76,3 +76,6 @@ total_final = subtotal_con_descuento + iva
 
 # Mostrar resultados
 mostrar_ticket(producto, subtotal, iva, total_final)
+
+if __name__=="__main__":
+    main()
