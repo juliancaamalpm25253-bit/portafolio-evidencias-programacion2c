@@ -7,10 +7,10 @@ class TestOperaciones(unittest.TestCase):
         self.assertEqual(suma(300,3),303)
         
     def test_resta_positivo (self):
-        self.assertEqual(resta(4,6), 2)
+        self.assertEqual(resta(4,6), -2)
         
     def test_multi_positivo(self):
-        self.assertEqual(multi(10,5), 50)
+        self.assertEqual(multi(5,10), 50)
         
     def test_div_positivo(self):
         self.assertEqual(div(100,2), 50)
