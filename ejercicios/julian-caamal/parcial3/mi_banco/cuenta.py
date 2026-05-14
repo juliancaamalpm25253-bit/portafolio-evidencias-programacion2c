@@ -4,14 +4,14 @@ class Cuenta:
         """
         Inicializa una nueva secion de la cuenta bancaria.
 
-    Args:
-        cliente (str): Nombre completo del titular de la cuenta.
-        cuenta (str): Número identificador único de la cuenta.
-        saldo (float, optional): Saldo inicial de la cuenta. 
-        Debe ser un valor no negativo. Por defecto es 0.
+        Args:
+            cliente (str): Nombre completo del titular de la cuenta.
+            cuenta (str): Número identificador único de la cuenta.
+            saldo (float, optional): Saldo inicial de la cuenta. 
+            Debe ser un valor no negativo. Por defecto es 0.
 
-    Raises:
-        ValueError: Si el saldo proporcionado es menor a cero.
+        Raises:
+            ValueError: Si el saldo proporcionado es menor a cero.
         """
         self.cliente = cliente
         self.cuenta = cuenta
@@ -21,16 +21,16 @@ class Cuenta:
         """
         Registra un ingreso de dinero en la cuenta.
 
-    Verifica que la cantidad sea positiva antes de sumarla al saldo actual.
-    Si la cantidad es 0 o negativa (como -200), la operación no se realiza
-    para mantener la el deposito en el saldo.
+        Verifica que la cantidad sea positiva antes de sumarla al saldo actual.
+        Si la cantidad es 0 o negativa (como -200), la operación no se realiza
+        para mantener la el deposito en el saldo.
 
-    Args:
-        cantidad (float): El monto de dinero que se desea depositar.
+        Args:
+            cantidad (float): El monto de dinero que se desea depositar.
 
-    Returns:
-        bool: True si el depósito fue exitoso (cantidad > 0), 
-              False si el monto era inválido y no se realizó la operación.
+        Returns:
+            bool: True si el depósito fue exitoso (cantidad > 0), 
+                False si el monto era inválido y no se realizó la operación.
         """
         
         if cantidad > 0:
